@@ -1,0 +1,11 @@
+label_idx,class_name
+0,annual crop
+1,forest
+2,herbaceous vegetation
+3,highway
+4,industrial
+5,pasture
+6,permanent crop
+7,residential
+8,river
+9,sea or lake
