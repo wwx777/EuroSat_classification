@@ -1,0 +1,103 @@
+
+# README 大纲：EuroSAT — 比较非学习与学习方法的土地分类与检测项目
+
+---
+
+## 1. 项目简介（Project Overview）
+
+* 简要介绍 EuroSAT 数据集来源（Sentinel-2 卫星、10 m GSD、10 类土地类型）。
+* 说明项目目标：
+
+  * 对比 **非学习方法（rule-based / 无监督）** 与 **学习方法（深度学习）** 在土地分类中的表现；
+  * 探索在无框标注条件下的 **区域级检测（detection）/ 定位** 方案；
+  * 选取一个 **现实场景（如跨地区或跨季节）** 进行 **泛化能力分析**。
+
+---
+
+## 2. 数据集说明（Dataset Description）
+
+* 数据来源与链接（GitHub、arXiv、HuggingFace）。
+* 包含两种形式：
+
+  * **RGB 图像**：用于传统和深度学习分类。
+  * **All Bands 图像（多光谱 .tif）**：支持光谱指数与规则方法。
+* 类别列表与样本规模。
+* 数据分区：训练 / 验证 / 测试。
+
+---
+
+## 3. 方法框架（Methodology Framework）
+
+分为两大方向：
+
+### 3.1 非学习方法（Non-Learning / Rule-Based Approaches）
+
+* 主要思想与使用场景。
+* 常见类型（光谱指数、阈值法、统计特征、无监督聚类等）。
+* 预期优势与局限。
+
+### 3.2 学习方法（Learning-Based Approaches）
+
+* 基于监督学习的分类模型（CNN、Transformer 等）。
+* 模型训练流程与评价指标。
+* 泛化与数据增强考虑。
+
+---
+
+## 4. 分类与检测任务（Classification and Detection Tasks）
+
+* **图像级分类（Image-Level Classification）**：基于整图预测土地类别。
+* **区域检测（Regional Detection）**：利用滑动窗口或打分热力图近似定位不同地物区域。
+* 对比传统“检测”数据集的局限与改造思路。
+
+---
+
+## 5. 对比与分析（Comparative Evaluation）
+
+* 评价指标：准确率、混淆矩阵、F1、计算成本。
+* 非学习 vs 学习的性能与可解释性对比。
+* 对不同地物类型的易混淆性讨论（如 Residential vs Industrial）。
+* 可视化示例（分类图、检测热力图）。
+
+---
+
+## 6. 泛化案例研究（Generalization Case Study）
+
+* 选取新的 Sentinel-2 区域或不同季节的影像。
+* 比较模型在域外数据上的表现：
+
+  * 性能下降幅度
+  * 对不同光照/气候/土地结构的适应性
+* 分析影响泛化的关键因素，并提出改进方向。
+
+---
+
+## 7. 项目结构（Project Structure）
+
+示例目录树：
+
+```
+├── data/                # EuroSAT 数据
+├── notebooks/           # 实验与分析
+├── rule_based/          # 非学习方法脚本
+├── learning_based/      # 深度学习模型
+├── detection/           # 区域检测实验
+├── case_study/          # 泛化分析
+└── results/             # 输出结果与图表
+```
+
+---
+
+## 8. 未来工作与扩展（Future Work）
+
+* 将规则与学习方法结合（hybrid / semi-supervised）。
+* 引入 SAR 或地理属性形成多模态数据。
+* 探索跨任务迁移与自监督特征。
+
+---
+
+## 9. 参考文献（References）
+
+* Helber, P. et al., *EuroSAT: A Novel Dataset and Deep Learning Benchmark for Land Use and Land Cover Classification*, IEEE JSTARS, 2019.
+* 以及相关非学习土地分类研究（rule-based / knowledge-driven）。
+
