@@ -2,7 +2,7 @@
 
 A comprehensive project comparing rule-based (non-learning) and deep learning approaches for land use classification and detection using the EuroSAT dataset.
 
-
+---
 
 ## 1. 项目简介 (Project Overview)
 
