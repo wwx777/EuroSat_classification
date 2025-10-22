@@ -20,8 +20,8 @@ A comprehensive project comparing rule-based (non-learning) and deep learning ap
 
 ### 数据来源
 - **原始论文**: [EuroSAT: A Novel Dataset and Deep Learning Benchmark for Land Use and Land Cover Classification](https://arxiv.org/abs/1709.00029)
-- **GitHub**: [EuroSAT Repository](https://github.com/phelber/EuroSAT)
-- **HuggingFace**: [EuroSAT Dataset](https://huggingface.co/datasets/eurosat)
+- **GitHub**: [EuroSAT Repository](https://github.com/phelber/EuroSAT?tab=readme-ov-file)
+- **HuggingFace**: [EuroSAT Dataset](https://huggingface.co/datasets/jonathan-roberts1/EuroSAT)
 
 ### 数据格式
 
