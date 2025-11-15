@@ -1,0 +1,34 @@
+{
+  "os": "Windows-10-10.0.22621-SP0",
+  "python": "CPython 3.9.21",
+  "startedAt": "2025-11-15T14:47:51.171701Z",
+  "program": "EuroSat_ViT_Classifier.ipynb",
+  "email": "1325830133@qq.com",
+  "root": "f:\\vscode project\\IMA_PW3\\eurosat_deeplearning\\eurosat_dl_fusion",
+  "host": "HC-240706Y",
+  "executable": "c:\\Users\\Administrator\\anaconda\\envs\\pytorch\\python.exe",
+  "cpu_count": 4,
+  "cpu_count_logical": 8,
+  "gpu": "NVIDIA GeForce MX350",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "141102354432",
+      "used": "62979260416"
+    }
+  },
+  "memory": {
+    "total": "17001664512"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce MX350",
+      "memoryTotal": "2147483648",
+      "cudaCores": 640,
+      "architecture": "Pascal",
+      "uuid": "GPU-f4d9253f-037d-364a-7bfb-32295f05851f"
+    }
+  ],
+  "cudaVersion": "12.0",
+  "writerId": "uncot57bu1m7gnnpombel0ceu5ueh28i"
+}
