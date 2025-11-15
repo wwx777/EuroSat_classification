@@ -66,7 +66,9 @@ def evaluate_test_set(model, test_loader, device, index_to_label):
 
             # Adjust the input dimensions and convert to float. 
             # PyTorch expects the input dimensions to be [batch_size, channels, height, width].
-            inputs = inputs.permute(0, 3, 1, 2).type(torch.cuda.FloatTensor)
+            # print("Input shape before permute:", inputs.shape)  # 应该是 (N, H, W, C)
+            # inputs = inputs.permute(0, 3, 1, 2).type(torch.cuda.FloatTensor)
+            # print("Input shape after permute:", inputs.shape)  # 应该是 (N, C, H, W)
 
             # Forward pass: compute the output of the model given the inputs.
             outputs = model(inputs)
@@ -139,7 +141,7 @@ def precision_recall_analysis(model, test_loader, device, output_path, model_nam
         for data in test_loader:
             inputs, labels = data
             inputs, labels = inputs.to(device), labels.to(device)
-            inputs = inputs.permute(0, 3, 1, 2).type(torch.cuda.FloatTensor)
+            # inputs = inputs.permute(0, 3, 1, 2).type(torch.cuda.FloatTensor)
             outputs = model(inputs)
             probs = nn.functional.softmax(outputs, dim=1)
             _, predicted = torch.max(probs, 1)

@@ -1,0 +1,59 @@
+// ...existing code...
+# Python cache / temp
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 常见编辑器/IDE
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 数据集目录（常见命名）
+/data/
+/datasets/
+/dataset/
+/data_raw/
+/raw_data/
+/data_processed/
+/inputs/
+/outputs/
+/results/
+/resources/datasets/
+/experiments/
+
+# 模型/检查点/权重
+/models/
+/checkpoints/
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.ckpt
+*.pb
+*.tflite
+
+# 常见大型数据文件、归档和媒体（通常用于数据集）
+*.npz
+*.npy
+*.pkl
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.wav
+
+# 日志
+*.log
+
