@@ -29,15 +29,8 @@ Thumbs.db
 /wandb/
 
 # # 模型/检查点/权重
-/models/
-/checkpoints/
-*.h5
-*.hdf5
-*.pt
 *.pth
-*.ckpt
-*.pb
-*.tflite
+
 
 # 常见大型数据文件、归档和媒体（通常用于数据集）
 *.npz
