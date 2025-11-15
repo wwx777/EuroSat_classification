@@ -26,8 +26,9 @@ Thumbs.db
 /results/
 /resources/datasets/
 /experiments/
+/wandb/
 
-# 模型/检查点/权重
+# # 模型/检查点/权重
 /models/
 /checkpoints/
 *.h5
