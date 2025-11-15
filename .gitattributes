@@ -3,3 +3,4 @@
 *.pth filter=lfs diff=lfs merge=lfs -text
 eurosat_deeplearning/models/ViT32_best_model.pth filter=lfs diff=lfs merge=lfs -text
 eurosat_deeplearning/models/ViT32-Pretrained_best_model.pth filter=lfs diff=lfs merge=lfs -text
+eurosat_deeplearning/models/*.pth filter=lfs diff=lfs merge=lfs -text
