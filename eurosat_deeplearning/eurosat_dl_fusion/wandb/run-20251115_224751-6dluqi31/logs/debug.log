@@ -1,0 +1,26 @@
+2025-11-15 22:47:51,308 INFO    MainThread:20288 [wandb_setup.py:_flush():81] Current SDK version is 0.22.3
+2025-11-15 22:47:51,308 INFO    MainThread:20288 [wandb_setup.py:_flush():81] Configure stats pid to 20288
+2025-11-15 22:47:51,309 INFO    MainThread:20288 [wandb_setup.py:_flush():81] Loading settings from C:\Users\Administrator\.config\wandb\settings
+2025-11-15 22:47:51,309 INFO    MainThread:20288 [wandb_setup.py:_flush():81] Loading settings from f:\vscode project\IMA_PW3\eurosat_deeplearning\eurosat_dl_fusion\wandb\settings
+2025-11-15 22:47:51,309 INFO    MainThread:20288 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2025-11-15 22:47:51,310 INFO    MainThread:20288 [wandb_init.py:setup_run_log_directory():706] Logging user logs to f:\vscode project\IMA_PW3\eurosat_deeplearning\eurosat_dl_fusion\wandb\run-20251115_224751-6dluqi31\logs\debug.log
+2025-11-15 22:47:51,310 INFO    MainThread:20288 [wandb_init.py:setup_run_log_directory():707] Logging internal logs to f:\vscode project\IMA_PW3\eurosat_deeplearning\eurosat_dl_fusion\wandb\run-20251115_224751-6dluqi31\logs\debug-internal.log
+2025-11-15 22:47:51,311 INFO    MainThread:20288 [wandb_init.py:monkeypatch_ipython():625] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000000003EF52D30>
+2025-11-15 22:47:51,326 INFO    MainThread:20288 [wandb_init.py:init():833] calling init triggers
+2025-11-15 22:47:51,326 INFO    MainThread:20288 [wandb_init.py:init():838] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.0001, 'epochs': 200, 'batch_size': 32, 'patience': 10, '_wandb': {}}
+2025-11-15 22:47:51,326 INFO    MainThread:20288 [wandb_init.py:init():881] starting backend
+2025-11-15 22:47:54,764 INFO    MainThread:20288 [wandb_init.py:init():884] sending inform_init request
+2025-11-15 22:47:55,976 INFO    MainThread:20288 [wandb_init.py:init():892] backend started and connected
+2025-11-15 22:47:55,988 INFO    MainThread:20288 [wandb_run.py:_label_probe_notebook():1328] probe notebook
+2025-11-15 22:47:55,998 INFO    MainThread:20288 [wandb_run.py:_label_probe_notebook():1338] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2025-11-15 22:47:55,999 INFO    MainThread:20288 [wandb_init.py:init():962] updated telemetry
+2025-11-15 22:47:56,020 INFO    MainThread:20288 [wandb_init.py:init():986] communicating run to backend with 90.0 second timeout
+2025-11-15 22:47:57,207 INFO    MainThread:20288 [wandb_init.py:init():1033] starting run threads in backend
+2025-11-15 22:47:57,831 INFO    MainThread:20288 [wandb_run.py:_console_start():2506] atexit reg
+2025-11-15 22:47:57,831 INFO    MainThread:20288 [wandb_run.py:_redirect():2354] redirect: wrap_raw
+2025-11-15 22:47:57,832 INFO    MainThread:20288 [wandb_run.py:_redirect():2423] Wrapping output streams.
+2025-11-15 22:47:57,832 INFO    MainThread:20288 [wandb_run.py:_redirect():2446] Redirects installed.
+2025-11-15 22:47:57,839 INFO    MainThread:20288 [wandb_init.py:init():1073] run started, returning control to user process
+2025-11-15 22:47:57,850 INFO    MainThread:20288 [wandb_watch.py:_watch():68] Watching
+2025-11-15 22:48:08,461 INFO    MainThread:20288 [wandb_init.py:_post_run_cell_hook():595] [no run ID] resuming backend

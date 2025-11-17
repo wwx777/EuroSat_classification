@@ -27,9 +27,10 @@ Thumbs.db
 /resources/datasets/
 /experiments/
 /wandb/
-
+/EuroSAT_fused/
 # # 模型/检查点/权重
 /models/
+
 
 
 # 常见大型数据文件、归档和媒体（通常用于数据集）
