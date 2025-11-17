@@ -220,3 +220,67 @@ def visualize_fused_data(data_loader, index_to_label):
 
         plt.tight_layout(rect=[0, 0, 1, 0.96]) # 调整布局以适应主标题
         plt.show()
+        
+        
+def visualize_fused_data(data_loader, index_to_label):
+    """
+    可视化用于数据融合的6通道数据。
+    它将分别显示RGB图像和三个光谱指数图。
+    """
+    # 获取一个批次的数据
+    try:
+        data_iter = iter(data_loader)
+        images, labels = next(data_iter)
+    except StopIteration:
+        print("数据加载器为空。")
+        return
+
+    # 定义用于反归一化的均值和标准差 (必须与你训练脚本中的一致)
+    mean = torch.tensor([0.485, 0.456, 0.406, 0.5, 0.5, 0.5]).view(6, 1, 1)
+    std = torch.tensor([0.229, 0.224, 0.225, 0.5, 0.5, 0.5]).view(6, 1, 1)
+
+    # 我们只可视化几张图就足够了
+    num_to_show = min(3, len(images)) # 最多显示3行
+
+    for i in range(num_to_show):
+        img_tensor = images[i]
+        label = labels[i].item()
+
+        # --- 核心步骤：反归一化，以便于可视化 ---
+        # 变换的逆运算: img = img * std + mean
+        denorm_img = img_tensor * std + mean
+        denorm_img = torch.clamp(denorm_img, 0, 1) # 将值限制在[0, 1]范围
+
+        # 创建一个1x4的子图布局来显示一张图的4个方面
+        fig, axs = plt.subplots(1, 4, figsize=(15, 4))
+        fig.suptitle(f'类别: {index_to_label[label]}', fontsize=16)
+
+        # 1. 显示RGB部分 (前3个通道)
+        rgb_img = denorm_img[:3, :, :].permute(1, 2, 0).numpy()
+        axs[0].imshow(rgb_img)
+        axs[0].set_title('RGB 图像')
+        axs[0].axis('off')
+
+        # 2. 显示NDVI指数图 (第4个通道, 索引为3)
+        ndvi_img = denorm_img[3, :, :].numpy()
+        im1 = axs[1].imshow(ndvi_img, cmap='viridis') # 使用色图来显示单通道数据
+        axs[1].set_title('NDVI 指数')
+        axs[1].axis('off')
+        fig.colorbar(im1, ax=axs[1], fraction=0.046, pad=0.04)
+
+        # 3. 显示NDWI指数图 (第5个通道, 索引为4)
+        ndwi_img = denorm_img[4, :, :].numpy()
+        im2 = axs[2].imshow(ndwi_img, cmap='viridis')
+        axs[2].set_title('NDWI 指数')
+        axs[2].axis('off')
+        fig.colorbar(im2, ax=axs[2], fraction=0.046, pad=0.04)
+
+        # 4. 显示NDBI指数图 (第6个通道, 索引为5)
+        ndbi_img = denorm_img[5, :, :].numpy()
+        im3 = axs[3].imshow(ndbi_img, cmap='viridis')
+        axs[3].set_title('NDBI 指数')
+        axs[3].axis('off')
+        fig.colorbar(im3, ax=axs[3], fraction=0.046, pad=0.04)
+
+        plt.tight_layout(rect=[0, 0, 1, 0.96]) # 调整布局以适应主标题
+        plt.show()
